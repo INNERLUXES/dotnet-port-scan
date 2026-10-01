@@ -1,0 +1,14 @@
+<!-- A made-up test project on modern .NET. -->
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <IsTestProject>true</IsTestProject>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.8.0" />
+    <PackageReference Include="Example.TestFramework" Version="2.6.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\OrdersPortal.Contracts\OrdersPortal.Contracts.csproj" />
+  </ItemGroup>
+</Project>

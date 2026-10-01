@@ -1,0 +1,6 @@
+<!-- A made-up library of shared data contracts, already moved to .NET Standard. -->
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+</Project>

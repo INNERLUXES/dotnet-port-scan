@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- A made-up Web Forms application, written the way Visual Studio wrote old-style web projects. -->
+<Project ToolsVersion="15.0" DefaultTargets="Build">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <ProjectGuid>{8C3D5E21-7F14-4B6A-8E1D-5A0C9B7E1101}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>OrdersPortal.Web</RootNamespace>
+    <AssemblyName>OrdersPortal.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="Example.Json, Version=12.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Example.Json.12.0.3\lib\net45\Example.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Example.Logging, Version=4.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Example.Logging.4.1.0\lib\net45\Example.Logging.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Default.aspx" />
+    <Content Include="Orders.aspx" />
+    <Content Include="OrderDetail.aspx" />
+    <Content Include="Site.Master" />
+    <Content Include="Controls\OrderGrid.ascx" />
+    <Content Include="Global.asax" />
+    <Content Include="Web.config" />
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Orders.aspx.cs">
+      <DependentUpon>Orders.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OrderDetail.aspx.cs">
+      <DependentUpon>OrderDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\AuditModule.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OrdersPortal.Core\OrdersPortal.Core.csproj">
+      <Project>{8C3D5E21-7F14-4B6A-8E1D-5A0C9B7E1103}</Project>
+      <Name>OrdersPortal.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OrdersPortal.Contracts\OrdersPortal.Contracts.csproj">
+      <Project>{8C3D5E21-7F14-4B6A-8E1D-5A0C9B7E1104}</Project>
+      <Name>OrdersPortal.Contracts</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+</Project>

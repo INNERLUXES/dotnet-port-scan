@@ -1,0 +1,32 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34330.188
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{6B1F7A10-3C41-4D7E-9A51-11C0F3E0A001}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{6B1F7A10-3C41-4D7E-9A51-11C0F3E0A002}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrdersPortal.Web", "src\OrdersPortal.Web\OrdersPortal.Web.csproj", "{8C3D5E21-7F14-4B6A-8E1D-5A0C9B7E1101}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrdersPortal.Services", "src\OrdersPortal.Services\OrdersPortal.Services.csproj", "{8C3D5E21-7F14-4B6A-8E1D-5A0C9B7E1102}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrdersPortal.Core", "src\OrdersPortal.Core\OrdersPortal.Core.csproj", "{8C3D5E21-7F14-4B6A-8E1D-5A0C9B7E1103}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrdersPortal.Contracts", "src\OrdersPortal.Contracts\OrdersPortal.Contracts.csproj", "{8C3D5E21-7F14-4B6A-8E1D-5A0C9B7E1104}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrdersPortal.Tests", "tests\OrdersPortal.Tests\OrdersPortal.Tests.csproj", "{8C3D5E21-7F14-4B6A-8E1D-5A0C9B7E1105}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8C3D5E21-7F14-4B6A-8E1D-5A0C9B7E1101} = {6B1F7A10-3C41-4D7E-9A51-11C0F3E0A001}
+		{8C3D5E21-7F14-4B6A-8E1D-5A0C9B7E1102} = {6B1F7A10-3C41-4D7E-9A51-11C0F3E0A001}
+		{8C3D5E21-7F14-4B6A-8E1D-5A0C9B7E1103} = {6B1F7A10-3C41-4D7E-9A51-11C0F3E0A001}
+		{8C3D5E21-7F14-4B6A-8E1D-5A0C9B7E1104} = {6B1F7A10-3C41-4D7E-9A51-11C0F3E0A001}
+		{8C3D5E21-7F14-4B6A-8E1D-5A0C9B7E1105} = {6B1F7A10-3C41-4D7E-9A51-11C0F3E0A002}
+	EndGlobalSection
+EndGlobal

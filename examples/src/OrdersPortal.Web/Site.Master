@@ -1,0 +1,10 @@
+<%@ Master Language="C#" AutoEventWireup="true" %>
+<!DOCTYPE html>
+<html>
+<head runat="server"><title>Orders portal</title></head>
+<body>
+    <form runat="server">
+        <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+    </form>
+</body>
+</html>

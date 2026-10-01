@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- A made-up WCF service application with one older ASMX service next to it. -->
+<Project ToolsVersion="15.0" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectGuid>{8C3D5E21-7F14-4B6A-8E1D-5A0C9B7E1102}</ProjectGuid>
+    <ProjectTypeGuids>{3D9AD99F-2412-4246-B90B-4EAA41C64699};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>OrdersPortal.Services</RootNamespace>
+    <AssemblyName>OrdersPortal.Services</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="OrderService.svc" />
+    <Content Include="LegacyOrders.asmx" />
+    <Content Include="Web.config" />
+    <Compile Include="IOrderService.cs" />
+    <Compile Include="OrderService.svc.cs">
+      <DependentUpon>OrderService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="LegacyOrders.asmx.cs">
+      <DependentUpon>LegacyOrders.asmx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OrdersPortal.Core\OrdersPortal.Core.csproj">
+      <Name>OrdersPortal.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OrdersPortal.Contracts\OrdersPortal.Contracts.csproj">
+      <Name>OrdersPortal.Contracts</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
