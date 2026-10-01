@@ -1,0 +1,49 @@
+{
+  "name": "dotnet-port-scan",
+  "version": "1.0.0",
+  "description": "Make an inventory of a .NET Framework solution before it is moved to modern .NET: project style, target frameworks, project kind, packages.config and PackageReference, project and framework-only assembly references, Web Forms, WCF and ASMX files, web.config modules, handlers and binding redirects, and a suggested move order. Reads files only; never runs dotnet, msbuild or nuget, no dependencies.",
+  "type": "module",
+  "main": "src/index.js",
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "bin": {
+    "dotnet-port-scan": "bin/dotnet-port-scan.js"
+  },
+  "files": [
+    "bin",
+    "src",
+    "docs",
+    "examples",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "test": "node --test \"test/*.test.js\"",
+    "test:coverage": "node --test --experimental-test-coverage \"test/*.test.js\"",
+    "check": "node tools/check.mjs",
+    "example": "node tools/example.mjs"
+  },
+  "keywords": [
+    "dotnet",
+    "net-framework",
+    "migration",
+    "porting",
+    "aspnet",
+    "web-forms",
+    "wcf",
+    "msbuild",
+    "inventory",
+    "cli"
+  ],
+  "author": "INNERLUXES <info@innerluxes.dev>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/INNERLUXES/dotnet-port-scan.git"
+  },
+  "homepage": "https://innerluxes.dev/web-development/dotnet"
+}
