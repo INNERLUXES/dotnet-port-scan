@@ -1,0 +1,10 @@
+# Every change is reviewed by a maintainer.
+* @innerluxesdev
+
+# The XML reader, the solution and project readers, the folder walk, the move order and the checks decide every line of the report; changes need extra care.
+/src/xml.js @innerluxesdev
+/src/sln.js @innerluxesdev
+/src/project.js @innerluxesdev
+/src/scan.js @innerluxesdev
+/src/order.js @innerluxesdev
+/src/check.js @innerluxesdev
